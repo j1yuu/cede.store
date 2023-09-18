@@ -3409,7 +3409,7 @@
 }
 
 .investors-card__img.i-stake {
-  width: 14.861vw;
+  width: 16.67vw;
   height: 7.5vw;
   background-color: #fff;
   border-radius: 1.67vw;
@@ -3492,14 +3492,12 @@
 }
 
 .investors-card__gsr {
-  width: 50%;
+  width: auto;
   border-radius: 1.11vw;
   flex: 0 auto;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
-  padding-right: 3.958vw;
+  padding: 5vw 1.39vw;
   display: flex;
   position: relative;
 }
@@ -3507,6 +3505,15 @@
 .investors-card__gsr.investors-stake {
   justify-content: flex-start;
   padding-left: 3.958vw;
+}
+
+.investors-card__gsr.i-c-l {
+  width: auto;
+  padding-left: 10vw;
+}
+
+.investors-card__gsr.i-c-r {
+  padding-right: 10vw;
 }
 
 .features-container {
@@ -5534,6 +5541,15 @@
   width: 1.1vw;
 }
 
+.img-gsr {
+  width: 14.3vw;
+  height: auto;
+}
+
+.img-dora {
+  width: 15vw;
+}
+
 @media screen and (min-width: 1440px) {
   .header__logo-img {
     height: 1.806vw;
@@ -6071,6 +6087,22 @@
     text-align: center;
   }
 
+  .investors-card__img.i-stake {
+    width: 216px;
+  }
+
+  .investors-card__gsr {
+    padding: 80px 20px;
+  }
+
+  .investors-card__gsr.i-c-l {
+    padding-left: 130px;
+  }
+
+  .investors-card__gsr.i-c-r {
+    padding-right: 130px;
+  }
+
   .main {
     padding-top: 6.39vw;
   }
@@ -6236,6 +6268,10 @@
   .gateway__card-3-2.z2 {
     z-index: 2;
     display: inline-block;
+  }
+
+  .img-gsr {
+    width: 206px;
   }
 }
 
@@ -7298,6 +7334,10 @@
     width: 326px;
   }
 
+  .investors-card__img.i-stake {
+    width: 240px;
+  }
+
   .c-s__evm-cards {
     padding: 10px;
   }
@@ -7331,8 +7371,16 @@
   }
 
   .investors-card__gsr {
-    padding-top: 80px;
-    padding-bottom: 72px;
+    padding: 80px 20px 72px;
+  }
+
+  .investors-card__gsr.i-c-l {
+    padding-left: 130px;
+    padding-right: 20px;
+  }
+
+  .investors-card__gsr.i-c-r {
+    padding-right: 130px;
   }
 
   .crypto__second {
@@ -8299,6 +8347,14 @@
 
   .image-13 {
     width: 16px;
+  }
+
+  .img-gsr {
+    width: 206px;
+  }
+
+  .img-dora {
+    width: 216px;
   }
 }
 
@@ -12515,6 +12571,7 @@
 
   .gateway__beta-btn-wrap-2.menu__beta-btn-wrap {
     margin-bottom: 10.13vw;
+    display: none;
   }
 
   .menu__header-2 {
@@ -12599,6 +12656,7 @@
 
   .gateway__beta-btn-wrap-3.menu__beta-btn-wrap {
     margin-bottom: 10.13vw;
+    display: none;
   }
 
   .feature__title {
@@ -12694,7 +12752,8 @@
   }
 
   .img-stake {
-    display: none;
+    height: 80%;
+    display: block;
   }
 
   .investors-card__upper-text {
@@ -12726,7 +12785,7 @@
     margin-bottom: 4.27vw;
     font-size: 8.53vw;
     line-height: 11.09vw;
-    display: none;
+    display: block;
   }
 
   .c-s__subtitle {
@@ -12784,8 +12843,12 @@
   }
 
   .investors-card__img.i-stake {
-    width: 53.3vw;
-    height: 34.67vw;
+    width: 100%;
+    height: 100%;
+  }
+
+  .investors-card__img.i-stake.i-c-r-s {
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .save__card-circle {
@@ -12841,9 +12904,8 @@
     background-size: 100%;
     border-radius: 2.67vw;
     justify-content: center;
-    padding-top: 11.2vw;
-    padding-bottom: 11.2vw;
-    padding-right: 0;
+    margin-bottom: 2.13vw;
+    padding: 0;
   }
 
   .investors-card__gsr.investors-stake {
@@ -12855,6 +12917,15 @@
     margin-top: 2.13vw;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .investors-card__gsr.i-c-l {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .investors-card__gsr.i-c-r {
+    padding: 0;
   }
 
   .crypto__second {
@@ -12930,6 +13001,10 @@
     margin-bottom: 3vw;
     font-size: 4.8vw;
     line-height: 6.24vw;
+  }
+
+  .menu__block-link-4.dn {
+    display: none;
   }
 
   .feature {
@@ -13031,9 +13106,11 @@
   }
 
   .header-menu__button-3 {
+    margin-right: -5.33vw;
     padding-top: 2.93vw;
     padding-bottom: 3.2vw;
     padding-right: 5.33vw;
+    display: block;
   }
 
   .revenue {
@@ -13195,7 +13272,7 @@
 
   .menu__block-4 {
     width: 49.6vw;
-    margin-bottom: 6.4vw;
+    margin-bottom: 14.93vw;
     padding-top: 4vw;
   }
 
@@ -13777,6 +13854,14 @@
   .gateway__card-1-2 {
     width: 69.07vw;
     position: static;
+  }
+
+  .img-gsr {
+    width: 51.73vw;
+  }
+
+  .img-dora {
+    width: 57.6vw;
   }
 }
 
