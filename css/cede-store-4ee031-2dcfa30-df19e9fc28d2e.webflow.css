@@ -3509,11 +3509,11 @@
 
 .investors-card__gsr.i-c-l {
   width: auto;
-  padding-left: 10vw;
+  padding-left: 9vw;
 }
 
 .investors-card__gsr.i-c-r {
-  padding-right: 10vw;
+  padding-right: 9vw;
 }
 
 .features-container {
@@ -6089,6 +6089,7 @@
 
   .investors-card__img.i-stake {
     width: 216px;
+    height: 108px;
   }
 
   .investors-card__gsr {
@@ -7336,6 +7337,7 @@
 
   .investors-card__img.i-stake {
     width: 240px;
+    height: 108px;
   }
 
   .c-s__evm-cards {
