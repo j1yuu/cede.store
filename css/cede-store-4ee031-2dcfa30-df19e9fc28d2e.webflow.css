@@ -214,7 +214,7 @@
 
 .gateway__text-blocks {
   margin-bottom: 3.33vw;
-  display: block;
+  display: none;
 }
 
 .gateway__text-block {
