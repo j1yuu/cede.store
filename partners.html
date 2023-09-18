@@ -1,0 +1,576 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://www.webflow.com  -->
+<!--  Last Published: Mon Sep 18 2023 12:16:10 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="64fafd88204ee03fb082c093" data-wf-site="63c68211ad2d7287cf479794">
+<head>
+  <meta charset="utf-8">
+  <title>Wallet to aggregate Centralized Exchange (CEX) | Interact with CeFi from a dApp</title>
+  <meta content="Integrate all Centralized Exchange (CEX) in a simple, cheap, familiar wallet integration experience. Let your users track, trade, transfer their CeFi assets without having to change your interface." name="description">
+  <meta content="cede.store – CeFi API key management for platform" property="og:title">
+  <meta content="cede.store is a non-custodial wallet for your CEX API keys. It stores your API keys directly on your machine and lets you interact with your CEX." property="og:description">
+  <meta content="https://uploads-ssl.webflow.com/63c68211ad2d7287cf479794/63c68211ad2d720c144797d9_og-image.png" property="og:image">
+  <meta content="cede.store – CeFi API key management for platform" property="twitter:title">
+  <meta content="cede.store is a non-custodial wallet for your CEX API keys. It stores your API keys directly on your machine and lets you interact with your CEX." property="twitter:description">
+  <meta content="https://uploads-ssl.webflow.com/63c68211ad2d7287cf479794/63c68211ad2d720c144797d9_og-image.png" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/cede-store-4ee031-2dcfa30-df19e9fc28d2e.webflow.css" rel="stylesheet" type="text/css">
+  <style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b759a"] {opacity:0;-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7594"] {opacity:0;-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7593"] {opacity:0;-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7595"] {-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7599"] {opacity:0;-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7597"] {opacity:0;-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}html.w-mod-js:not(.w-mod-ix) [data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7596"] {opacity:0;-webkit-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0vw, 0vw, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);}}</style>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Inter:300,regular,500,600,700"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.ico" rel="apple-touch-icon"><!--  Google Tag Manager  -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KMPWHTK');</script>
+  <!--  End Google Tag Manager  -->
+  <style>
+	.z3{
+		z-index: 3 !important;
+	}
+	.z2{
+		z-index: 2 !important;
+	}
+	.z1{
+		z-index: 1 !important;
+	}
+</style>
+</head>
+<body>
+  <div class="w-embed w-iframe">
+    <!--  Google Tag Manager (noscript)  -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMPWHTK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!--  End Google Tag Manager (noscript)  -->
+  </div>
+  <div class="banner-3">
+    <div class="banner-wrapper-2">
+      <div class="banner-items">
+        <p class="paragraph-3">All the product updates will be posted on Twitter.</p>
+        <p class="banner-mobile-p-2">We are always looking for a web3 talent.</p>
+        <a href="https://twitter.com/cedelabs" target="_blank" class="paragraph-3 banner-btn w-button">Follow us!</a>
+      </div>
+      <div data-w-id="35281e8a-db67-9f56-0907-810618bcb842" class="banner-cross-2"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6360139cfd796c33c1e758d1_cross.svg" loading="lazy" alt="banner description : all updates will be announced on Twitter" class="banner-cross__image"></div>
+    </div>
+  </div>
+  <div class="page">
+    <div class="header-4">
+      <div class="header-wrapper-3">
+        <div class="header-logo-2">
+          <a href="index.html" class="header-logo__link-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715b9_cedestore-logo.svg" loading="lazy" alt="" class="header-logo__img"></a>
+        </div>
+        <div class="header-pages">
+          <a href="index.html" class="header-page">Users</a>
+          <a href="#" class="header-page active">Partners</a>
+        </div>
+        <div class="header-content">
+          <div class="header-links-3">
+            <a href="https://medium.com/cede-labs" class="header-links__bi-3 w-inline-block"><img src="https://uploads-ssl.webflow.com/6355416aa7b90c7242c63c63/635564ab7e625021f00734a4_bihance-header.svg" loading="lazy" alt="Medium icon logo" class="image-6"></a>
+            <a href="https://www.linkedin.com/company/cede-labs" class="header-links__link-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/6355416aa7b90c7242c63c63/635564abcef916608104d15b_linkedin-header.svg" loading="lazy" alt="Linkedin icon logo"></a>
+            <a href="https://discord.com/invite/V7hgKf6NWf" class="header-links__link-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/6355416aa7b90c7242c63c63/635564ab7e625056d90734a5_discord-header.svg" loading="lazy" alt="Discord icon logo"></a>
+            <a href="https://twitter.com/CedeLabs" class="header-links__link-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/6355416aa7b90c7242c63c63/635564ab2cf25041036d078c_twitter-header.svg" loading="lazy" alt="Twitter icon logo"></a>
+          </div>
+          <a href="https://chrome.google.com/webstore/detail/cedestore/dcfphbfmjohnlcpelbhfbjolhmmlcbhd" target="_blank" class="header-botton-5 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715cc_chrome.svg" loading="lazy" alt="" class="gateway__beta-icon-4">
+            <div class="gateway__beta-text-6"><strong class="bold-text-4">Download now!</strong></div>
+          </a>
+          <div class="header-line-container-2">
+            <p class="header-line-4">|</p>
+          </div>
+          <div data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7534" class="header-menu__button-3">
+            <p class="header-menu__button-text-3">Menu</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+      <div class="form__block w-form">
+        <form id="wf-form-Beta-whitelist" name="wf-form-Beta-whitelist" data-name="Beta whitelist" method="get" class="form__wrap" data-wf-page-id="64fafd88204ee03fb082c093" data-wf-element-id="f7e2cb56-cb44-edb0-6529-48c01e3b7539"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715cb_form-close.svg" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b753a" alt="" class="form__wrap-close">
+          <div class="form__title">Be whitelisted<br>for the private beta</div><input type="email" class="form__field w-input" maxlength="256" name="email" data-name="Email" placeholder="Email*" id="email" required=""><input type="text" class="form__field w-input" maxlength="256" name="ETH-address" data-name="ETH Address" placeholder="ETH address*" id="ETH-address" required=""><input type="text" class="form__field w-input" maxlength="256" name="Twitter-nickname" data-name="Twitter Nickname" placeholder="Twitter nickname*" id="Twitter-nickname" required=""><input type="text" class="form__field w-input" maxlength="256" name="Discord-tag" data-name="Discord Tag" placeholder="Discord tag*" id="Discord-tag" required=""><input type="text" class="form__field w-input" maxlength="256" name="Telegram" data-name="Telegram" placeholder="Telegram" id="Telegram"><textarea placeholder="What blockchains do you use (total number/blockchain names)?*" maxlength="5000" id="Blockchain-names" name="Blockchain-names" data-name="Blockchain Names" required="" class="form__field form__textarea w-input"></textarea><textarea placeholder="What centralized exchanges do you use (total number/cex names)?*" maxlength="5000" id="cex-names" name="cex-names" data-name="Cex Names" required="" class="form__field form__textarea w-input"></textarea><textarea placeholder="How many DeFi wallets do you use?*" maxlength="5000" id="defi-wallets" name="defi-wallets" data-name="Defi Wallets" required="" class="form__field form__textarea w-input"></textarea><textarea placeholder="Describe your crypto usage (CEFI/DEFI, DCA, trading, NFT, yield hunter,...)*" maxlength="5000" id="crypto-usage" name="crypto-usage" data-name="Crypto Usage" required="" class="form__field form__textarea w-input"></textarea><textarea placeholder="What tools do you use right now to track and manage your cryptos?*" maxlength="5000" id="tools-for-managing-cryptos" name="tools-for-managing-cryptos" data-name="Tools For Managing Cryptos" required="" class="form__field form__textarea w-input"></textarea><input type="text" class="form__field w-input" maxlength="256" name="Country-of-residence" data-name="Country Of Residence" placeholder="Country of residence" id="Country-of-residence"><textarea placeholder="Why do you want to participate in CEDE private beta?" maxlength="5000" id="participation-in-CEDE" name="participation-in-CEDE" data-name="Participation In CEDE" class="form__field form__textarea w-input"></textarea><input type="text" class="form__field w-input" maxlength="256" name="Age" data-name="Age" placeholder="Age" id="Age"><textarea placeholder="How did you know about our private beta?" maxlength="5000" id="how-did-you-know-about-beta" name="how-did-you-know-about-beta" data-name="How Did You Know About Beta" class="form__field form__textarea w-input"></textarea><textarea placeholder="Anything to share?" maxlength="5000" id="Anything-to-share" name="Anything-to-share" data-name="Anything To Share" class="form__field form__textarea w-input"></textarea><label id="checkbox" class="w-checkbox checkbox__field">
+            <div class="w-checkbox-input w-checkbox-input--inputType-custom agree__checkbox w--redirected-checked"></div><input type="checkbox" id="agreement" name="agreement" data-name="Agreement" required="" checked="" style="opacity:0;position:absolute;z-index:-1"><span class="agree__label w-form-label" for="agreement">I agree to the processing of my personal data</span>
+          </label><input type="submit" value="Send a request" data-wait="Please wait..." class="form__submit w-button">
+        </form>
+        <div class="form__success w-form-done"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715af_form-submit-img.svg" loading="lazy" alt="" class="form__success-img">
+          <div class="form__success-text">The form has been submitted successfully.</div>
+          <div class="form__success-text form__success-text-dark">Thank you! We will contact you shortly.</div><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715cb_form-close.svg" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7559" alt="" class="form__success-close">
+        </div>
+        <div class="w-form-fail">
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main__wrap">
+        <h1 class="main__title"><span class="getaway__title--span">Superpower your platform </span>with CEX</h1>
+        <div class="main__subtitle">Users’ CeFi assets, their control: on your app, <span class="text-span-2">no key custody</span></div>
+        <a href="https://calendly.com/pierre-ni/cede" target="_blank" class="gateway__beta-btn-5 w-inline-block">
+          <div class="gateway__beta-text-7"><strong class="bold-text-4">Book a call</strong></div>
+        </a>
+      </div><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715c5_gateway-bg-new.webp" loading="lazy" alt="" class="gateway__bg-2">
+      <div class="main__img"><img src="images/ms.webp" loading="lazy" sizes="(max-width: 767px) 95vw, (max-width: 991px) 58vw, (max-width: 1919px) 50vw, 690px" srcset="images/ms-p-500.webp 500w, images/ms-p-800.webp 800w, images/ms.webp 992w" alt="" class="img"></div>
+    </div>
+    <section class="access-2">
+      <h2 class="title">Access to 10+ CEX</h2>
+      <div class="access__subtitle">Cede.store gives you access to 10+ CEX including Binance, Coinbase, Kraken, OKX and more</div>
+      <div class="container-2 access__container">
+        <div class="access__container-in">
+          <div class="access__left">
+            <div class="access__block-title-2">What is it?</div>
+            <p class="access__block-text-2">A non-custodial browser extension that allows: CEX account connection &amp; CEX asset tracking &amp; management.<br><br>Any app can access CeFi through cede.store.</p>
+            <a href="https://calendly.com/pierre-ni/cede" target="_blank" class="access__link-block-2">Get demo</a>
+          </div>
+          <div class="gateway__cards-mb swiper">
+            <div class="swiper-wrapper"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971582_gateway-card-1.png" loading="lazy" alt="" class="gateway__card-1 swiper-slide"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971549_main-card2-new.webp" loading="lazy" alt="" class="gateway__card-1 swiper-slide"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971515_main-cards-3.webp" loading="lazy" alt="" class="gateway__card-1 swiper-slide gateway__card-2"></div>
+          </div>
+          <div class="access-right">
+            <div class="gateway__cards-2"><img src="images/gateway-card-1.png" loading="lazy" data-w-id="f3858c64-5da2-0e81-96a0-ee1e6f85edf2" sizes="(max-width: 479px) 100vw, (max-width: 767px) 184.92709350585938px, (max-width: 991px) 24vw, 14vw" alt="screenshot from the store extension" srcset="images/gateway-card-1-p-500.png 500w, images/gateway-card-1-p-800.png 800w, images/gateway-card-1.png 804w" class="gateway__card-1"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971582_gateway-card-1.png" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7593" alt="" class="gateway__card-1 z2"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971582_gateway-card-1.png" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7594" alt="" class="gateway__card-1 z1">
+              <div class="gateway__card-2 black"></div><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971549_main-card2-new.webp" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7595" alt="" class="gateway__card-2"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971549_main-card2-new.webp" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7596" alt="" class="gateway__card-2 z3"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971549_main-card2-new.webp" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7597" alt="" class="gateway__card-2 z1"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971515_main-cards-3.webp" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7598" alt="" class="gateway__card-3">
+              <div class="gateway__card-3 black"></div><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971515_main-cards-3.webp" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7599" alt="" class="gateway__card-3 z3"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971515_main-cards-3.webp" loading="lazy" data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b759a" alt="" class="gateway__card-3 z2">
+            </div><img src="images/circle-ss.svg" loading="lazy" alt="" class="circle-ss"><img src="images/cryptocurr-d.svg" loading="lazy" alt="" class="access-crypto__desc">
+          </div><img src="images/cryptocurr-d.svg" loading="lazy" alt="" class="access-crypto__desc tab"><img src="images/cryptocurr-m.svg" loading="lazy" alt="" class="access-crypto__desc mob"><img src="images/save-circle.svg" loading="lazy" alt="" class="image-12">
+        </div>
+      </div>
+    </section>
+    <section class="read">
+      <div class="container-2">
+        <h2 class="title">Read &amp; Write Features</h2>
+        <div class="read__subtitle"><img src="images/read-svg-1.svg" loading="lazy" alt="" class="read__svg">
+          <p class="read__text">Read-only features</p>
+        </div>
+        <div class="features-container">
+          <div class="feature-full"><img src="images/ro-f-circle.svg" loading="lazy" alt="" class="feature-full__circle">
+            <div class="feature-full__text-container">
+              <p class="feature__title ft-first">Fetch all types of wallets</p>
+              <p class="feature__text">Spot, funding, margin, futures for each CEX</p>
+            </div>
+            <div class="feature-full__img-container"><img src="images/ro-f-bg.png" loading="lazy" sizes="100vw" srcset="images/ro-f-bg-p-500.png 500w, images/ro-f-bg-p-800.png 800w, images/ro-f-bg.png 932w" alt="" class="features-full__bg-img"><img src="images/rw-tab.png" loading="lazy" width="450" alt="" class="rw-tab"><img src="images/ro-features-1.png" loading="lazy" alt="" class="features-full__img"></div>
+          </div>
+          <div class="feature">
+            <div class="feature__container">
+              <p class="feature__title">Fetch CeFi transaction history</p>
+              <p class="feature__text">Trades, deposits and withdrawals</p><img src="images/ro-f-2.png" loading="lazy" alt="" class="feature__img">
+            </div><img src="images/ro-f-circle-2.svg" loading="lazy" alt="" class="feature__circle">
+          </div>
+          <div class="feature">
+            <div class="feature__container">
+              <p class="feature__title">Fetch CEX deposit addresses</p>
+              <p class="feature__text">For a given token and chain</p><img src="images/ro-f-3.png" loading="lazy" alt="" class="feature__img">
+            </div><img src="images/ro-f-circle-2.svg" loading="lazy" alt="" class="feature__circle">
+          </div>
+        </div>
+        <div class="read__subtitle"><img src="images/write-f-new.svg" loading="lazy" alt="" class="read__svg">
+          <p class="read__text">Write features</p>
+        </div>
+        <div class="features-container">
+          <div class="feature">
+            <div class="feature__container">
+              <p class="feature__title ft-sec">Let your users <span class="text-span-3">do a trade on their CEX</span></p><img src="images/w-f-1.png" loading="lazy" alt="" class="feature__img">
+            </div><img src="images/ro-f-circle-2.svg" loading="lazy" alt="" class="feature__circle">
+          </div>
+          <div class="feature">
+            <div class="feature__container fc-2">
+              <p class="feature__title ft-sec bigger">Let your users do a transfer from their CEX</p><img src="images/send-from-dapp.png" loading="lazy" alt="" class="feature__img">
+            </div><img src="images/ro-f-circle-2.svg" loading="lazy" alt="" class="feature__circle">
+          </div>
+        </div>
+        <p class="read__p">All supported CEX &amp; features are detailed here</p>
+        <a href="https://docs.cede.store/supported-features" target="_blank" class="read__link w-inline-block"><img src="images/doc.svg" loading="lazy" alt="" class="read__img">
+          <p class="read__link-p">Check our doc</p>
+        </a>
+      </div>
+    </section>
+    <section class="crypto">
+      <div class="container-2">
+        <h2 class="title">Crypto Ecosystem</h2>
+        <div class="crypto__system">
+          <div class="crypto__first"><img src="images/crypto-arror-up.svg" loading="lazy" alt="" class="crypto-arrow-left">
+            <div class="crypto__first-cont"><img src="images/your_app.svg" loading="lazy" alt="" class="app-icon">
+              <div class="crypto__left-text">Your app</div>
+            </div><img src="images/crypto-arror-down.svg" loading="lazy" alt="" class="crypto-arrow-left">
+          </div>
+          <div class="arrows-mob"><img src="images/arrow-down.svg" loading="lazy" alt="" class="arrow-down-mb"><img src="images/arrow-down-blue.svg" loading="lazy" alt="" class="arrow-down-mb"></div>
+          <div class="c-s">
+            <div class="c-s__title">Decentralized wallets</div>
+            <div class="c-s__subtitle">Secure &amp; Non custodial</div>
+            <div class="crypto__second">
+              <div class="c-s-one">
+                <div class="c-s__container">
+                  <div class="c-s__evm-cont">
+                    <div class="c-s__evm-cards"><img src="images/fox.svg" loading="lazy" alt="" class="c-s__evm-img"><img src="images/nonevm-1.svg" loading="lazy" alt="" class="c-s__evm-img m-db"><img src="images/rabbit.svg" loading="lazy" alt="" class="c-s__evm-img m-dn"></div>
+                    <div class="c-s__evm-text">evm</div>
+                  </div>
+                  <div class="c-s__evm-cont non-evm">
+                    <div class="c-s__evm-cards"><img src="images/nonevm-1.svg" loading="lazy" alt="" class="c-s__evm-img"><img src="images/nonevm-2.svg" loading="lazy" alt="" class="c-s__evm-img"><img src="images/nonevm-3.svg" loading="lazy" alt="" class="c-s__evm-img"><img src="images/nonevm-4.svg" loading="lazy" alt="" class="c-s__evm-img"></div>
+                    <div class="c-s__evm-text">non-evm</div>
+                  </div>
+                </div>
+                <div class="c-s__subhead">Browser</div>
+                <div class="c-s__container">
+                  <div class="c-s__long green">
+                    <div class="c-s__gr-circle"></div>
+                    <div class="c-s__text">Stores blockchain keys</div>
+                  </div>
+                  <div class="c-s__short green">
+                    <div class="c-s__gr-circle"></div>
+                    <div class="c-s__text">Send request</div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-s-two"><img src="images/cede-new-logo.svg" loading="lazy" alt="" class="c-s__logo">
+                <div class="c-s__container">
+                  <div class="c-s__long blue">
+                    <div class="c-s__gr-circle blue"></div>
+                    <div class="c-s__text">Stores CEX API keys</div>
+                  </div>
+                  <div class="c-s__short">
+                    <div class="c-s__gr-circle blue"></div>
+                    <div class="c-s__text">Send request</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="arrows"><img src="images/crypto-arrow-down.svg" loading="lazy" alt="" class="cr-arr up"><img src="images/crypto-arrow-up.svg" loading="lazy" alt="" class="cr-arr"></div>
+          <div class="arrows-mob"><img src="images/arrow-down.svg" loading="lazy" alt="" class="arrow-down-mb"><img src="images/arrow-down-blue.svg" loading="lazy" alt="" class="arrow-down-mb"></div>
+          <div class="crypto__last">
+            <div class="c-l__title">Crypto Ecosystem</div>
+            <div class="c-l">
+              <div class="c-t">
+                <div class="c-l__subtitle">DeFi</div>
+                <div class="c-l__container">
+                  <div class="c-l__coins"><img src="images/defi-1.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-2.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-3.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-4.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-5.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-6.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-7.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-8.svg" loading="lazy" alt="" class="c-l__coin"></div>
+                  <div class="c-l__subtext">Blockchain evm compatible</div>
+                  <div class="c-l__coins low"><img src="images/defi-9.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-10.svg" loading="lazy" alt="" class="c-l__coin"><img src="images/defi-11.svg" loading="lazy" alt="" class="c-l__coin"></div>
+                  <div class="c-l__subtext c-l__st-low">Blockchain non-evm compatible</div>
+                </div>
+              </div>
+              <div class="c-t">
+                <div class="c-l__subtitle blue">CEX</div>
+                <div class="c-l__container blue"><img src="images/cex-1.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-2.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-3.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-4.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-5.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-6.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-7.svg" loading="lazy" alt="" class="c-l__coin blue"><img src="images/cex-8.svg" loading="lazy" alt="" class="c-l__coin blue"></div>
+              </div>
+            </div>
+          </div><img src="images/crypto-img.svg" loading="lazy" alt="" class="crypto-m">
+        </div>
+      </div>
+    </section>
+    <section class="save">
+      <div class="container-2">
+        <h2 class="title">Save time &amp; money</h2>
+        <div class="save__container">
+          <div class="save-cards">
+            <div class="save__card">
+              <div class="save__card-content"><img src="images/timer-start.svg" loading="lazy" alt="" class="save__card-img">
+                <p class="save__card-title">Quick integration</p>
+                <p class="paragraph-4">Thanks to a DeFi wallet <br>integration experience</p>
+              </div><img src="images/save-circle.svg" loading="lazy" alt="" class="save__card-circle">
+            </div>
+            <div class="save__card">
+              <div class="save__card-content"><img src="images/script.svg" loading="lazy" alt="" class="save__card-img">
+                <p class="save__card-title">Turnkey solution</p>
+                <ul role="list" class="save__card-list">
+                  <li>Self-custody storage</li>
+                  <li>Unified API</li>
+                </ul>
+              </div><img src="images/save-circle.svg" loading="lazy" alt="" class="save__card-circle">
+            </div>
+            <div class="save__card save__card-2">
+              <div class="save__card-content"><img src="images/wallet.svg" loading="lazy" alt="" class="save__card-img">
+                <p class="save__card-title">Save development costs</p>
+                <ul role="list" class="save__card-list">
+                  <li>Save integration costs<br></li>
+                  <li>No maintenance costs</li>
+                  <li>No additional infrastructure costs</li>
+                </ul>
+              </div><img src="images/save-circle.svg" loading="lazy" alt="" class="save__card-circle">
+            </div>
+          </div>
+          <a href="https://calendly.com/pierre-ni/cede" target="_blank" class="save__link">Book a call</a>
+        </div>
+      </div>
+    </section>
+    <section class="reach">
+      <div class="container-2">
+        <h2 class="title reach__title">Reach a new market segment</h2>
+        <div class="reach__container">
+          <div class="reach__items">
+            <p class="paragraph-6">Reach all the DeFi users<br>owning CeFi assets</p>
+            <p class="paragraph-5">Access the users that need to track/manage their CeFi assets but value self custody.<br></p>
+          </div><img src="images/reach-img-d.webp" loading="lazy" sizes="(max-width: 767px) 100vw, (max-width: 991px) 346.2708435058594px, (max-width: 1919px) 35vw, 503px" srcset="images/reach-img-d-p-500.webp 500w, images/reach-img-d.webp 1006w" alt="" class="image-2"><img src="images/reach-tab.svg" loading="lazy" alt="" class="image-5"><img src="images/reach-m.svg" loading="lazy" alt="" class="image-11"><img src="images/reach-circle.svg" loading="lazy" alt="" class="reach-circle">
+        </div>
+      </div>
+    </section>
+    <section class="ui">
+      <div class="container-2">
+        <h1 class="title">A seamless wallet UI/UX</h1>
+        <p class="ui__subtitle">Very few changes needed to your UI</p>
+        <div class="ui__container"><img src="images/ui-circle.svg" loading="lazy" alt="" class="ui__circle">
+          <div class="ui__img w-embed">
+            <div class="ui__img">
+              <video preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted="" style="height:100%; width:100%">
+                <source src="https://hunter-git-main-j1yuu.vercel.app/assets/connection.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="onboarding">
+      <div class="container-2">
+        <h1 class="title onb">Leave the Onboarding to Us</h1>
+        <p class="onboarding__subtitle">We provide personalized tutorials for each given CEX and chosen permission</p>
+        <a href="https://calendly.com/pierre-ni/cede" target="_blank" class="onboarding__link">Book a call</a>
+        <div class="onboarding__container"><img src="images/ui-circle.svg" loading="lazy" alt="" class="onboarding__circle">
+          <div class="onboarding__img w-embed">
+            <div class="onboarding__img">
+              <video preload="auto" no-controls="" autoplay="" loop="" playsinline="" muted="" style="height:100%; width:100%">
+                <source src="https://hunter-git-main-j1yuu.vercel.app/assets/onboarding.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="revenue">
+      <div class="container-2">
+        <h2 class="title revenue-title">Revenue from day one</h2>
+        <div class="revenue__container">
+          <div class="revenue__items">
+            <p class="revenue__title">Get part of the affiliation fees generated by your users</p>
+            <div class="revenue__subtitle">
+              <a href="index.html" class="revenue__link">Cede.store</a> is completely free for partners
+            </div>
+            <a href="https://calendly.com/pierre-ni/cede" class="revene__link">Book a call</a>
+          </div><img src="images/reve_new.svg" loading="lazy" alt="" class="revenue__img">
+        </div>
+      </div>
+    </section>
+    <section class="they">
+      <div class="container-2">
+        <h2 class="title title-integrate">They already integrate us</h2>
+        <div class="they__container">
+          <div class="they__card"><img src="images/octav.png" loading="lazy" alt="" class="octav"></div>
+          <div class="they__card"><img src="images/krystal.png" loading="lazy" alt="" class="krystal"></div>
+          <div class="they__card"><img src="images/zerion.png" loading="lazy" alt="" class="zerion"></div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <h2 class="title">Our partners</h2>
+      <div class="partners__cards"><img src="images/partner-1.svg" loading="lazy" alt="" class="partners__img"><img src="images/partner-2.svg" loading="lazy" alt="" class="partners__img"><img src="images/partner-3.svg" loading="lazy" alt="" class="partners__img"></div><img src="images/partners.svg" loading="lazy" alt="" class="image-3">
+    </section>
+    <div id="investors" class="investors">
+      <div class="investors-container">
+        <h2 class="title">Investors</h2>
+        <div class="investors-cards">
+          <div class="investors-card__gsr">
+            <div class="investors-card__img"><img src="images/gsr-new.svg" loading="lazy" alt="GSR VC investor logo icon" class="image-4"></div>
+          </div>
+          <div class="investors-card__gsr investors-stake">
+            <div class="investors-card__img i-stake"><img src="images/stake.png" loading="lazy" alt="Stake Capital Group VC investor icon" class="img-stake"><img src="images/scg-m.png" loading="lazy" alt="SCG investor VC logo icon" class="img-stake-m"></div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-top investors-card__mid-corner-1">
+            <div class="station-f"><img src="images/sf-new-png_1sf-new-png.webp" loading="lazy" alt="Station F icon logo" class="station-f__img"></div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-top">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/hadrien_1hadrien.webp" loading="lazy" alt="Sismo investor icon logo" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Hadrien C.</p>
+                <p class="investors-card__lower-text">Sismo</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-top">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/encode-new_1encode-new.webp" loading="lazy" alt="Encode club logo icon investor" class="investors-card__mid-img--img encode-img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Anthony B.</p>
+                <p class="investors-card__lower-text">Encode Club</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-top">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/nicolas.svg" loading="lazy" alt="Ledger logo icon advisor" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Nicolas Bacca</p>
+                <p class="investors-card__lower-text">Ledger</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-top investors-card__mid-corner-2">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/ulysee_1ulysee.webp" loading="lazy" alt="APWine advisor logo icon" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Ulysse Ramage</p>
+                <p class="investors-card__lower-text">Apwine</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-bot investors-card__mid-corner-1">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/pablo_1pablo.webp" loading="lazy" alt="Angle Protocol icon logo advisor" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Pablo Veyrat</p>
+                <p class="investors-card__lower-text">Angle Protocol</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-bot">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/marc_1marc.webp" loading="lazy" alt="AAVE icon logo advisor" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Marc Zeller</p>
+                <p class="investors-card__lower-text">AAVE</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-bot">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/just-mining_1just-mining.webp" loading="lazy" sizes="(max-width: 767px) 16vw, (max-width: 1919px) 4vw, 52.40625px" srcset="images/just-mining_1-p-500.png 500w, images/just-mining_1-p-800.png 800w, images/just-mining_1just-mining.webp 800w" alt="Just Mining icon logo advisor" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text"><strong class="bold-text-5">Owen Simonin</strong></p>
+                <p class="investors-card__lower-text"><strong class="bold-text-5">Just Mining</strong></p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-bot">
+            <div class="investors-card__flex">
+              <div class="investors-card__mid-img"><img src="images/harsh_1harsh.webp" loading="lazy" alt="EPSN icon logo advisor" class="investors-card__mid-img--img"></div>
+              <div class="investors-card__text-container">
+                <p class="investors-card__upper-text">Harsh Rajat</p>
+                <p class="investors-card__lower-text">EPNS</p>
+              </div>
+            </div>
+          </div>
+          <div class="investors-card__mid investors-card__mid-bot investors-card__mid-corner-2">
+            <div class="theblox"><img src="images/theblox.svg" loading="lazy" alt="The Blox icon logo advisor" class="theblox-img"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b76ff" class="built__section">
+      <div data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7700" class="built-4">
+        <div class="built__bg-elements"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387285b46c35fc9225298c5_banner-bg-1.png" loading="lazy" alt="part of jungle image" class="built__bg-el-1"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387285c5e7b189d80d6fe3e_banner-bg-2.png" loading="lazy" alt="part of jungle image" class="built__bg-el-2"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387285cb2ea186f05cfa738_banner-bg-3.png" loading="lazy" alt="part of jungle image" class="built__bg-el-3"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387285c46c35f80cc5298c7_banner-bg-4.png" loading="lazy" alt="part of jungle image" class="built__bg-el-4"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387285cf4b309ccd0df51d1_banner-bg-5.png" loading="lazy" alt="part of jungle image" class="built__bg-el-5"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387285d08495c1f68235024_banner-bg-6.png" loading="lazy" alt="part of jungle image" class="built__bg-el-6"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/6387291573f5f38947c536d0_banner-bg-7.png" loading="lazy" alt="part of jungle image" class="built__bg-el-7"><img src="https://uploads-ssl.webflow.com/635eafbfc7a1a7ad83771fcf/63872915cd1c059d2e2feea1_banner-bg-8.png" loading="lazy" alt="part of jungle image" class="built__bg-el-8"></div>
+        <div class="built__bg-3"></div>
+        <div class="built__title-4">Book a call to know more</div>
+        <a href="https://calendly.com/pierre-ni/cede" target="_blank" class="built__link-6 w-inline-block">
+          <div class="text-block-12">Book a call</div>
+        </a>
+      </div>
+    </div>
+    <div class="footer-2">
+      <div class="footer__block-2">
+        <a href="#" class="header__logo-link-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715b9_cedestore-logo.svg" loading="lazy" alt="" class="header__logo-img-3 footer__logo-img"></a>
+        <div>Contact: hello@cedelabs.io</div>
+        <div class="footer__block-wrap">
+          <div>
+            <a href="https://cede.link/" target="_blank" class="footer__block-link-2 footer__block-link-2">Cede.link</a>
+            <a href="https://cedelabs.io/" target="_blank" class="footer__block-link-2">Cede labs</a>
+          </div>
+          <div class="footer__block-inner-wrap">
+            <div class="footer__social-links-wrap">
+              <a href="https://medium.com/cede-labs" target="_blank" class="footer__social-link-3 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715bf_footer-social-1.svg" loading="lazy" alt="" class="footer-social-link-icon-2"></a>
+              <a href="https://www.linkedin.com/company/cede-labs" target="_blank" class="footer__social-link-3 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971532_footer-social-2.svg" loading="lazy" alt="" class="footer-social-link-icon-2"></a>
+              <a href="https://discord.com/invite/V7hgKf6NWf" target="_blank" class="footer__social-link-3 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971521_footer-social-3.svg" loading="lazy" alt="" class="footer-social-link-icon-2"></a>
+              <a href="https://twitter.com/CedeLabs" class="footer__social-link-3 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b5297154c_footer-social-4.svg" loading="lazy" alt="" class="footer-social-link-icon-2"></a>
+            </div>
+            <a href="https://jobs.cedelabs.io/" target="_blank" class="footer__block-btn-3">We are hiring!</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom-2">
+        <div class="footer__bottom-text-2">© 2023 Cede Labs. All Rights Reserved.</div>
+        <a href="#" class="footer__bottom-text-2 footer__bottom-link">Legal &amp; Privacy</a>
+      </div>
+    </div>
+    <div style="-webkit-transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, -100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);display:none" class="new-menu">
+      <div class="menu__header-3">
+        <a href="#" class="header__logo-link-3 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b529715b9_cedestore-logo.svg" loading="lazy" alt="" class="header__logo-img-5"></a>
+        <div data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7731" class="menu__close-3">
+          <div class="text-block-10">Close</div><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971540_menu-close-icon.svg" loading="lazy" alt="" class="menu__close-icon-2">
+        </div>
+      </div>
+      <div class="menu__blocks-4">
+        <div class="menu__block-4">
+          <div class="menu__block-title-4">Menu</div>
+          <a href="#" class="menu__block-link-4 menu__block-link-hidden">Features</a>
+          <a href="#" class="menu__block-link-4">CEX Aggregator</a>
+          <a href="#" class="menu__block-link-4">Non-custodial</a>
+          <a href="#" class="menu__block-link-4">Same UX as a DeFi browser wallet</a>
+          <a href="#" class="menu__block-link-4">FAQ</a>
+        </div>
+        <div class="menu__block-2-4">
+          <div class="menu__block-title-4">Product</div>
+          <a href="https://cede.link/" target="_blank" class="menu__block-link-4 w-inline-block">
+            <div class="text-block-11">Cede.link</div>
+          </a>
+        </div>
+        <div class="menu__block-3-4">
+          <div class="menu__block-title-4">About</div>
+          <a href="https://cedelabs.io/" target="_blank" class="menu__block-link-4 w-inline-block">
+            <div class="text-block-11">Cede labs</div>
+          </a>
+        </div>
+      </div>
+      <div class="menu__footer-2">
+        <div class="gateway__beta-btn-wrap-3 menu__beta-btn-wrap">
+          <a data-w-id="f7e2cb56-cb44-edb0-6529-48c01e3b7751" href="https://jobs.cedelabs.io" target="_blank" class="gateway__beta-btn-6 w-inline-block">
+            <div class="gateway__beta-text-5">We are hiring!</div>
+          </a>
+        </div>
+        <div class="menu__footer-socials">
+          <a href="https://medium.com/cede-labs" target="_blank" class="menu__footer-social-2 menu__footer-social-1 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b52971511_menu-social-3.svg" loading="lazy" alt="" class="menu__footer-social-icon-2"></a>
+          <a href="https://discord.com/invite/V7hgKf6NWf" target="_blank" class="menu__footer-social-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b5297155b_menu-social-1.svg" loading="lazy" alt="" class="menu__footer-social-icon-2"></a>
+          <a href="https://www.linkedin.com/company/cede-labs" target="_blank" class="menu__footer-social-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b5297155e_menu-social-4.svg" loading="lazy" alt="" class="menu__footer-social-icon-2"></a>
+          <a href="https://twitter.com/CedeLabs" target="_blank" class="menu__footer-social-2 w-inline-block"><img src="https://uploads-ssl.webflow.com/64f6ff86b8c131d297902e8e/64f6ffb65f44977b5297150d_menu-social-2.svg" loading="lazy" alt="" class="menu__footer-social-icon-2"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-extension">
+    <div class="popup-extension__wrap">
+      <div class="popup-extension__text">Download the app in the chrome store</div>
+      <a data-w-id="bcad8559-f933-c998-449d-7a651ebbf1fb" href="https://chrome.google.com/webstore/detail/cede-store/dcfphbfmjohnlcpelbhfbjolhmmlcbhd" target="_blank" class="popup-extension__link w-inline-block">
+        <div class="text-block-9">Download for</div><img src="images/chrome.svg" loading="lazy" alt="Chrome logo icon" class="popup-extension__img">
+      </a><img src="images/form-close.svg" loading="lazy" data-w-id="bcad8559-f933-c998-449d-7a651ebbf1ff" alt="cross to close the banner" class="popup-extension__cross">
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=63c68211ad2d7287cf479794" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+  var swiper1 = new Swiper(".gateway__cards-mb", {
+    slidesPerView: 1.3,
+    spaceBetween: 24,
+    centeredSlides: true,
+  });
+  var swiper2 = new Swiper(".features__slider", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+ $(document).ready(function() {
+  $(document).mouseup(function(e) {
+		var form = $(".form__block");
+    var formWrap = $(".form");
+		if (formWrap.css('display') !== 'none' && !form.is(e.target)&& form.has(e.target).length === 0 ) {
+			formWrap.css('opacity', '0');
+      setTimeout(() => formWrap.css('display', 'none'), 500);
+		};
+	});
+});
+</script>
+</body>
+</html>
