@@ -3371,6 +3371,10 @@
   text-decoration: none;
 }
 
+.header-page.dn {
+  display: none;
+}
+
 .feature__img {
   width: 19.3vw;
   height: 22.15vw;
