@@ -120,7 +120,7 @@
   max-width: 100%;
   background-color: #121212;
   justify-content: space-between;
-  padding: 2vw 12.22vw 17.08vw 9.44vw;
+  padding: 4.59vw 12.22vw 17.08vw 9.44vw;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -3870,10 +3870,9 @@
   margin-right: 1.11vw;
 }
 
-.revenue__img {
-  width: 36.74vw;
-  height: 25.28vw;
-  margin-top: 3.89vw;
+.revenue__img-d {
+  width: auto;
+  height: 20.28vw;
 }
 
 .revenue__subtitle {
@@ -4423,6 +4422,7 @@
   font-family: Inter, sans-serif;
   font-size: 1.25vw;
   line-height: 140%;
+  display: none;
 }
 
 .menu__close-3 {
@@ -4640,6 +4640,7 @@
 .access__container-in {
   width: 100%;
   justify-content: space-between;
+  margin-top: 4.44vw;
   display: flex;
 }
 
@@ -5172,7 +5173,7 @@
 }
 
 .security-fs__left {
-  width: 60vw;
+  width: 62vw;
   padding-top: 15.07vw;
 }
 
@@ -5259,7 +5260,12 @@
 
 .account__animation {
   z-index: 1;
-  width: 38.2vw;
+  width: 450px;
+  height: 100%;
+  align-items: center;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+  display: none;
   position: relative;
 }
 
@@ -5285,7 +5291,7 @@
   border: 1px solid #41434d;
   border-radius: .97vw;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -5293,15 +5299,23 @@
 
 .code__left {
   z-index: 1;
-  margin-top: 3.89vw;
+  max-height: 95%;
+  margin-top: 0;
   margin-left: 3.89vw;
+  display: none;
   position: relative;
+  bottom: 0;
 }
 
 .code__right {
   z-index: 1;
   width: 32.01vw;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   margin-right: 5.83vw;
+  display: flex;
   position: relative;
 }
 
@@ -5380,6 +5394,10 @@
   display: inline-block;
 }
 
+.link__button.dn {
+  display: none;
+}
+
 .audit {
   background-color: #171717;
   border: 1px solid #41434d;
@@ -5452,6 +5470,7 @@
 .bug__title {
   margin-bottom: 1.67vw;
   font-size: 1.67vw;
+  font-weight: 500;
   line-height: 120%;
 }
 
@@ -5520,6 +5539,7 @@
 }
 
 .practice__card-top {
+  color: #a3a3a3;
   margin-bottom: 1.67vw;
   font-size: 1.11vw;
   line-height: 140%;
@@ -5548,6 +5568,182 @@
 
 .img-dora {
   width: 15vw;
+}
+
+.bug__img-m, .practice__swiper, .practice-swiper {
+  display: none;
+}
+
+.sec-ani_1-main {
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  transform: rotate(0deg) scale3d(1none, 1none, 1none);
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+._1-1-d {
+  width: 230px;
+  position: absolute;
+  top: 36px;
+  right: 79px;
+  transform: scale(1)translate(0);
+}
+
+._1-2-d {
+  width: 230px;
+  transform: scale3d(1none, 1none, 1none) translate(0px, 0px);
+  transform-style: preserve-3d;
+  position: absolute;
+  right: 32px;
+}
+
+._1-3-d {
+  width: 230px;
+  transform: scale3d(1none, 1none, 1none) translate(0px, 0px);
+  transform-style: preserve-3d;
+  position: absolute;
+  bottom: 36px;
+  right: 79px;
+}
+
+.sec-1-d-lock {
+  width: 140px;
+  opacity: 0;
+  transform-style: preserve-3d;
+  position: absolute;
+  right: 194px;
+  transform: scale(0)rotateX(-360deg)rotateY(0)rotateZ(0);
+}
+
+.text-span-7 {
+  color: #fff;
+}
+
+._2-1-d {
+  width: 319px;
+  height: 300px;
+  position: absolute;
+  top: -41px;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+}
+
+._2-2-d {
+  width: 319px;
+  height: 300px;
+  max-height: 100%;
+}
+
+._2-1-d-c {
+  width: 319px;
+  height: 257px;
+  max-height: 100%;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: auto;
+  right: 0%;
+  overflow: hidden;
+}
+
+._2-line {
+  width: 0;
+  height: 8px;
+  opacity: 0;
+  background-color: #5fa6ff;
+  border-radius: 200px;
+  position: absolute;
+  top: 36px;
+  left: -8px;
+  box-shadow: 0 2px 16px rgba(95, 166, 255, .5);
+}
+
+._2-code {
+  width: 88px;
+  opacity: 0;
+  position: absolute;
+  top: 120px;
+  right: -36px;
+  transform: scale(.8)rotate(135deg);
+  box-shadow: 0 2px 32px rgba(0, 0, 0, .25);
+}
+
+.privacy__img {
+  padding-top: 3.9vw;
+  position: relative;
+}
+
+.privacy__t-d {
+  height: 28.06vw;
+}
+
+.privacy__pass {
+  width: 26.11vw;
+  position: absolute;
+  bottom: 11.53vw;
+  right: 7.43vw;
+  box-shadow: 0 2px 32px rgba(0, 0, 0, .25);
+}
+
+.revenue__ani {
+  margin-top: 4.44vw;
+  margin-bottom: 4.44vw;
+  position: relative;
+}
+
+.revenue__glass {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.revenue__notification {
+  z-index: 2;
+  width: 26.8vw;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 5.56vw;
+  transform: translate(0, -50%);
+}
+
+.revenue__img-t, .revenue__img-m {
+  display: none;
+}
+
+.account__lottie {
+  width: 36.81vw;
+}
+
+.security-2-lottie {
+  height: 28.06vw;
+  margin-left: 3.33vw;
+}
+
+.pp__text {
+  width: 48.61vw;
+  margin-bottom: 5.56vw;
+}
+
+.pp__up {
+  width: 48.61vw;
+  padding-top: 10.41vw;
+  padding-bottom: 5.56vw;
+}
+
+.text-span-8 {
+  color: #fff;
 }
 
 @media screen and (min-width: 1440px) {
@@ -7552,9 +7748,8 @@
   }
 
   .revenue__container {
-    border-radius: 14px;
-    margin-top: 80px;
-    padding-left: 48px;
+    margin-left: 0;
+    margin-right: auto;
   }
 
   .header-menu__button-3 {
@@ -7594,10 +7789,9 @@
     margin-right: 16px;
   }
 
-  .revenue__img {
-    width: 529px;
-    height: 364px;
-    margin-top: 40px;
+  .revenue__img-d {
+    height: 292px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 
@@ -7956,6 +8150,10 @@
     height: 48px;
   }
 
+  .access__container-in {
+    margin-top: 64px;
+  }
+
   .header-menu__button-text-3 {
     font-size: 18px;
   }
@@ -8215,6 +8413,11 @@
     font-size: 16px;
   }
 
+  .account__animation {
+    width: 500px;
+    display: none;
+  }
+
   .code {
     margin-bottom: 24px;
   }
@@ -8357,6 +8560,53 @@
 
   .img-dora {
     width: 216px;
+  }
+
+  .sec-ani_1-main {
+    width: 140px;
+    height: 140px;
+  }
+
+  ._1-1-d, ._1-2-d, ._1-3-d {
+    width: 250px;
+  }
+
+  .sec-1-d-lock {
+    width: 160px;
+    right: 220px;
+  }
+
+  .privacy__img {
+    padding-top: 56px;
+  }
+
+  .privacy__t-d {
+    height: 404px;
+  }
+
+  .privacy__pass {
+    width: 376px;
+    bottom: 166px;
+    right: 107px;
+  }
+
+  .revenue__ani {
+    margin-top: 74px;
+    margin-bottom: 74px;
+  }
+
+  .revenue__notification {
+    width: 386px;
+    right: 80px;
+  }
+
+  .account__lottie {
+    width: 530px;
+  }
+
+  .security-2-lottie {
+    height: 404px;
+    margin-left: 48px;
   }
 }
 
@@ -10301,8 +10551,10 @@
   }
 
   .revenue__container {
+    max-width: 100%;
     margin-top: 7.67vw;
     padding-left: 4.8vw;
+    overflow: hidden;
   }
 
   .header-menu__button-3 {
@@ -10329,10 +10581,10 @@
     margin-right: 1.92vw;
   }
 
-  .revenue__img {
+  .revenue__img-d {
     width: auto;
     height: 32vw;
-    margin-top: 6.7vw;
+    display: none;
   }
 
   .revenue__subtitle {
@@ -10731,6 +10983,7 @@
     border: 1px solid #41434d;
     border-radius: 1.68vw;
     flex-flow: wrap;
+    margin-top: 7.67vw;
     padding-top: 4.8vw;
     padding-bottom: 4.8vw;
     padding-left: 3.87vw;
@@ -11039,13 +11292,25 @@
     font-size: 1.92vw;
   }
 
+  .account__animation {
+    width: 65%;
+  }
+
   .code__container {
-    height: 55.16vw;
+    height: 45vw;
     border-radius: 1.68vw;
   }
 
+  .code__left {
+    width: 40vw;
+    height: 39vw;
+    margin-top: 16vw;
+    margin-left: 2vw;
+    display: block;
+  }
+
   .code__right {
-    width: 47%;
+    width: 40%;
   }
 
   .code__title {
@@ -11062,12 +11327,18 @@
   }
 
   .privacy__container {
-    height: 55.16vw;
+    height: 45vw;
     border-radius: 1.68vw;
+    align-items: flex-end;
   }
 
   .privacy__left {
-    width: 47%;
+    width: 45%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
   }
 
   .privacy__title {
@@ -11149,6 +11420,109 @@
 
   .image-13 {
     width: 1.4vw;
+  }
+
+  .sec-ani_1-main {
+    width: 17vw;
+    height: 17vw;
+  }
+
+  ._1-1-d {
+    width: 26vw;
+    top: 5.5vw;
+    right: 9.5vw;
+  }
+
+  ._1-2-d {
+    width: 26vw;
+    max-width: 30vw;
+    right: 2.4vw;
+  }
+
+  ._1-3-d {
+    width: 26vw;
+    bottom: 5.5vw;
+    right: 9.5vw;
+  }
+
+  .sec-1-d-lock {
+    width: 21.6vw;
+    right: 20vw;
+  }
+
+  ._2-1-d {
+    width: 40vw;
+    height: 39vw;
+    position: relative;
+    top: -4.9vw;
+  }
+
+  ._2-2-d {
+    width: 40vw;
+    height: 39vw;
+  }
+
+  ._2-1-d-c {
+    width: 40vw;
+    height: 34vw;
+    top: auto;
+    bottom: 0%;
+    left: auto;
+    right: 0%;
+  }
+
+  ._2-line {
+    width: 0;
+    height: 1vw;
+    opacity: 0;
+    top: 4.8vw;
+    left: -1.3vw;
+  }
+
+  ._2-code {
+    width: 8vw;
+    opacity: 0;
+    top: 14.39vw;
+    right: -4.13vw;
+  }
+
+  .privacy__img {
+    padding-top: 0;
+  }
+
+  .privacy__t-d {
+    height: 42vw;
+  }
+
+  .privacy__pass {
+    width: 36vw;
+    bottom: 13.695vw;
+    right: 11.145vw;
+  }
+
+  .revenue__ani {
+    margin-top: 7.67vw;
+    margin-bottom: 7.67vw;
+  }
+
+  .revenue__notification {
+    width: 37.17vw;
+    right: 4.8vw;
+  }
+
+  .revenue__img-t {
+    height: 26.28vw;
+    display: block;
+  }
+
+  .account__lottie {
+    width: 54vw;
+  }
+
+  .security-2-lottie {
+    height: 38vw;
+    margin-left: 2vw;
+    display: none;
   }
 }
 
@@ -11974,7 +12348,7 @@
 
   .swiper-wrapper {
     width: auto;
-    align-items: center;
+    align-items: stretch;
     padding-left: 0;
     padding-right: 0;
     display: flex;
@@ -12032,6 +12406,10 @@
     height: 9.07vw;
     bottom: 46.93vw;
     right: 2.67vw;
+  }
+
+  .swiper-slide {
+    width: 100%;
   }
 
   .bubble-text-wrap {
@@ -12290,6 +12668,11 @@
     padding-left: 5.33vw;
     padding-right: 5.33vw;
     position: relative;
+  }
+
+  .container.container--practice {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .social__block-2 {
@@ -12584,6 +12967,11 @@
   }
 
   .new-menu {
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
     padding-bottom: 4.27vw;
     display: none;
   }
@@ -13077,6 +13465,7 @@
 
   .header-pages {
     grid-column-gap: 2.133vw;
+    display: none;
   }
 
   .crypto__first {
@@ -13136,10 +13525,11 @@
     margin-right: 2.67vw;
   }
 
-  .revenue__img {
+  .revenue__img-d {
     width: auto;
-    height: 57vw;
-    margin-top: 9.6vw;
+    height: 40vw;
+    margin-top: 12.8vw;
+    margin-bottom: 6.4vw;
     margin-left: auto;
   }
 
@@ -13303,6 +13693,11 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .title.title--practice {
+    padding-left: 5.33vw;
+    padding-right: 5.33vw;
   }
 
   .onboarding__container {
@@ -13621,6 +14016,7 @@
 
   .access__container-in {
     border-radius: 3.73vw;
+    margin-top: 12.8vw;
     padding-top: 8.53vw;
     padding-left: 6.4vw;
   }
@@ -13858,12 +14254,394 @@
     position: static;
   }
 
+  .security-fs {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+
+  .security-fs__left {
+    z-index: 1;
+    width: 76vw;
+    padding-top: 13.87vw;
+    position: relative;
+  }
+
+  .security-title {
+    text-align: center;
+    font-size: 8.53vw;
+  }
+
+  .security-fs__right {
+    margin-top: -14vw;
+    margin-bottom: 0;
+  }
+
+  .security-fs__img {
+    width: auto;
+    height: 65vw;
+  }
+
+  .security-fs__text {
+    width: auto;
+    text-align: center;
+    margin-top: 6.4vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 4.26vw;
+  }
+
+  .account {
+    margin-bottom: 4.27vw;
+  }
+
+  .account__container {
+    height: auto;
+    border-radius: 3.73vw;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8.53vw 6.4vw 11vw;
+  }
+
+  .account__left {
+    width: 100%;
+    margin-bottom: 10.67vw;
+    margin-left: 0;
+  }
+
+  .account__title {
+    margin-bottom: 6.4vw;
+    font-size: 4.8vw;
+  }
+
+  .account__text {
+    width: 97%;
+    font-size: 4.27vw;
+  }
+
+  .account__animation {
+    width: 100%;
+    height: 47.47vw;
+    padding-left: 0;
+    display: flex;
+  }
+
+  .circle-left {
+    display: none;
+  }
+
+  .code {
+    margin-bottom: 4.27vw;
+  }
+
+  .code__container {
+    height: auto;
+    border-radius: 3.73vw;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding-top: 8.53vw;
+    padding-left: 6.4vw;
+    padding-right: 6.4vw;
+  }
+
+  .code__left {
+    width: 68.8vw;
+    height: 64.53vw;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .code__right {
+    width: 100%;
+    margin-bottom: 10.67vw;
+    margin-right: 0;
+  }
+
+  .code__title {
+    margin-bottom: 6.4vw;
+    font-size: 4.8vw;
+  }
+
+  .code__text {
+    font-size: 4.27vw;
+  }
+
+  .circle-right {
+    display: none;
+  }
+
+  .privacy {
+    margin-bottom: 17.07vw;
+  }
+
+  .privacy__container {
+    height: auto;
+    border-radius: 3.73vw;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 8.53vw;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .privacy__left {
+    width: 100%;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 6.4vw;
+    padding-right: 6.4vw;
+  }
+
+  .privacy__title {
+    margin-bottom: 6.4vw;
+    font-size: 4.8vw;
+  }
+
+  .privacy__text {
+    width: 100%;
+    margin-bottom: 8.53vw;
+    font-size: 4.27vw;
+  }
+
+  .privacy__text.dn {
+    margin-bottom: 0;
+  }
+
+  .link__button {
+    padding: 3.73vw 8.53vw;
+    font-size: 3.73vw;
+  }
+
+  .audit {
+    margin-bottom: 17.07vw;
+    padding: 8.53vw 4vw;
+  }
+
+  .audit__text {
+    width: 100%;
+    font-size: 4.27vw;
+  }
+
+  .bug {
+    margin-bottom: 32vw;
+  }
+
+  .bug__container {
+    height: auto;
+    border-radius: 3.73vw;
+    flex-direction: column;
+    align-items: stretch;
+    padding-top: 8.53vw;
+    padding-left: 6.4vw;
+    padding-right: 0;
+  }
+
+  .bug__left {
+    width: 100%;
+    height: auto;
+    margin-bottom: 17.33vw;
+    padding-right: 6.4vw;
+  }
+
+  .bug__title {
+    margin-bottom: 6.4vw;
+    font-size: 4.8vw;
+  }
+
+  .bug__text {
+    margin-bottom: 8.53vw;
+    font-size: 4.27vw;
+  }
+
+  .bug__images {
+    padding-top: 0;
+  }
+
+  .bug__img {
+    display: none;
+  }
+
+  .bug__crypto {
+    width: 72.8vw;
+    bottom: 26.4vw;
+    right: 10.133vw;
+  }
+
+  .practice {
+    margin-bottom: 32vw;
+  }
+
+  .practice__subtitle {
+    margin-top: 10.67vw;
+    margin-bottom: 12.8vw;
+    font-size: 4.27vw;
+  }
+
+  .practice__cards {
+    display: none;
+  }
+
+  .practice__card {
+    width: 78.4vw;
+    height: 58.67vw;
+    border-radius: 3.73vw;
+    padding: 6.4vw;
+  }
+
+  .practice__card-title {
+    margin-bottom: 0;
+    font-size: 4.8vw;
+  }
+
+  .practice__card-top {
+    margin-bottom: 6.4vw;
+    font-size: 3.73vw;
+  }
+
+  .pracitice__card-low-text {
+    margin-right: 3.2vw;
+    font-size: 4.27vw;
+  }
+
+  .image-13 {
+    width: 4.27vw;
+  }
+
   .img-gsr {
     width: 51.73vw;
   }
 
   .img-dora {
     width: 57.6vw;
+  }
+
+  .text-span-6 {
+    display: inline-block;
+  }
+
+  .bug__img-m {
+    width: 62.133vw;
+    margin-left: auto;
+    display: block;
+  }
+
+  .practice__swiper {
+    align-items: stretch;
+    display: flex;
+  }
+
+  .swiper {
+    width: 100%;
+  }
+
+  .practice-swiper {
+    width: 100%;
+    display: block;
+  }
+
+  .sec-ani_1-main {
+    width: 24vw;
+    height: 24vw;
+  }
+
+  ._1-1-d {
+    width: 42.67vw;
+    top: 0;
+    right: 7.47vw;
+  }
+
+  ._1-2-d {
+    width: 42.67vw;
+    max-width: 42.67vw;
+    right: 0;
+  }
+
+  ._1-3-d {
+    width: 42.67vw;
+    bottom: 0;
+    right: 7.47vw;
+  }
+
+  .sec-1-d-lock {
+    width: 28vw;
+    opacity: 0;
+    right: 50%;
+    transform: translate(50%)scale(0)rotateX(-360deg)rotateY(0)rotateZ(0);
+  }
+
+  ._2-1-d {
+    width: 68.8vw;
+    height: 64.53vw;
+    top: -8.4vw;
+  }
+
+  ._2-2-d {
+    width: 68.8vw;
+    height: 64.53vw;
+  }
+
+  ._2-1-d-c {
+    width: 68.8vw;
+    height: 56vw;
+  }
+
+  ._2-line {
+    width: 0;
+    opacity: 0;
+    top: 7.4vw;
+  }
+
+  .privacy__img {
+    margin-top: 19.2vw;
+    margin-left: auto;
+    padding-top: 0;
+  }
+
+  .privacy__t-d {
+    height: 64.27vw;
+  }
+
+  .privacy__pass {
+    width: 76.3vw;
+    max-width: 200%;
+    bottom: 23vw;
+    right: 6.4vw;
+  }
+
+  .revenue__ani {
+    margin-top: 12.8vw;
+    margin-bottom: 6.4vw;
+    margin-left: auto;
+  }
+
+  .revenue__notification {
+    width: 76.53vw;
+    right: 6.4vw;
+  }
+
+  .revenue__img-t {
+    display: none;
+  }
+
+  .revenue__img-m {
+    height: 57.07vw;
+    display: block;
+  }
+
+  .account__lottie {
+    width: 100%;
+    display: none;
+  }
+
+  .security-2-lottie {
+    height: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
   }
 }
 
